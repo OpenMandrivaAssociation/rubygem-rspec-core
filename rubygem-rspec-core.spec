@@ -10,7 +10,7 @@
 
 %define	need_bootstrap_set	1
 
-#%{!?need_bootstrap:	%global	need_bootstrap	%{need_bootstrap_set}}
+#% {!?need_bootstrap:	% global	need_bootstrap	% {need_bootstrap_set}}
 
 Summary:	Rspec-2 runner and formatters
 Name:		rubygem-%{gemname}
