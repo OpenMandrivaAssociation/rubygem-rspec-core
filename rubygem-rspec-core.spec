@@ -29,6 +29,7 @@ BuildRequires:	rubygem(ZenTest)
 BuildRequires:	rubygem(rake)
 BuildRequires:	rubygem(rspec-expectations)
 BuildRequires:	rubygem(rspec-mocks)
+BuildRequires:	ruby-rdoc
 %endif
 Requires:	ruby(abi) = %{rubyabi}
 Requires:	rubygem(rspec-expectations)
