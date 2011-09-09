@@ -27,8 +27,8 @@ BuildRequires:	rubygems
 %if 0%{?need_bootstrap} < 1
 BuildRequires:	rubygem(ZenTest)
 BuildRequires:	rubygem(rake)
-BuildRequires:	rubygem(rspec-expectations)
-BuildRequires:	rubygem(rspec-mocks)
+#BuildRequires:	rubygem(rspec-expectations)
+#BuildRequires:	rubygem(rspec-mocks)
 BuildRequires:	ruby-rdoc
 %endif
 Requires:	ruby(abi) = %{rubyabi}
