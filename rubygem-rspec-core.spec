@@ -8,7 +8,7 @@
 
 %define	rubyabi	1.8
 
-%define	need_bootstrap_set	1
+%define	need_bootstrap_set	0
 
 %{!?need_bootstrap:	%global need_bootstrap %{need_bootstrap_set}}
 
