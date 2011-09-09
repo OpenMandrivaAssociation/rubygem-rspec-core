@@ -24,12 +24,12 @@ Source0:	http://rubygems.org/gems/%{gemname}-%{fullver}.gem
 
 BuildRequires:	ruby(abi) = %{rubyabi}
 BuildRequires:	rubygems
+BuildRequires:	ruby-rdoc
 %if 0%{?need_bootstrap} < 1
 BuildRequires:	rubygem(ZenTest)
 BuildRequires:	rubygem(rake)
 BuildRequires:	rubygem(rspec-expectations)
 BuildRequires:	rubygem(rspec-mocks)
-BuildRequires:	ruby-rdoc
 %endif
 Requires:	ruby(abi) = %{rubyabi}
 Requires:	rubygem(rspec-expectations)
