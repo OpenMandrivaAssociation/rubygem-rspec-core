@@ -1,5 +1,5 @@
 %define	gemdir		%(ruby -rubygems -e 'puts Gem::dir' 2>/dev/null)
-%define	majorver	2.6.4
+%define	majorver	2.8.0
 %define	rpmminorver	.%(echo %preminorver | sed -e 's|^\\.\\.*||')
 %define	fullver	%{majorver}%{?preminorver}
 
@@ -24,22 +24,6 @@ Source0:	http://rubygems.org/gems/%{gemname}-%{fullver}.gem
 
 BuildRequires:	ruby(abi) = %{rubyabi}
 BuildRequires:	rubygems
-BuildRequires:	ruby-rdoc
-%if 0%{?need_bootstrap} < 1
-BuildRequires:	rubygem(ZenTest)
-BuildRequires:	rubygem(rake)
-BuildRequires:	rubygem(rspec-expectations)
-BuildRequires:	rubygem(rspec-mocks)
-%endif
-Requires:	ruby(abi) = %{rubyabi}
-Requires:	rubygem(rspec-expectations)
-Requires:	rubygem(rspec-mocks)
-Requires:	rubygem(rake)
-# Optional
-#Requires:	rubygem(ZenTest)
-#Requires:	rubygem(mocha)
-#Requires:	rubygem(ruby-debug)
-#Requires:	rubygem(rr)
 Provides:	rubygem(%{gemname}) = %{version}-%{release}
 BuildArch:	noarch
 
@@ -97,28 +81,17 @@ mv %{buildroot}%{_bindir}/autospec{,2}
 # cleanups
 rm -f %{buildroot}%{geminstdir}/{.document,.gitignore,.treasure_map.rb,.rspec,.travis.yml,spec.txt}
 
-%if 0%{?need_bootstrap} < 1
-%check
-pushd .%{geminstdir}
-# spec/autotest/failed_results_re_spec.rb (and others) fail, skipping this for now
-# (need investigating)
-ruby -rubygems -Ilib/ -S bin/rspec \
-	spec/rspec/*_spec.rb spec/rspec/*/*_spec.rb \
-%if 0
-	spec/autotest/*_spec.rb
-%endif
-%endif
-
 %files
-%defattr(-,root,root,-)
 %dir	%{geminstdir}
+%dir	%{geminstdir}/exe/autospec
+%dir	%{geminstdir}/exe
+%dir	%{geminstdir}/exe/rspec
 
 %doc	%{geminstdir}/License.txt
 %doc	%{geminstdir}/*.md
 
 %{_bindir}/autospec2
 %{_bindir}/rspec
-%{geminstdir}/bin/
 %{geminstdir}/lib/
 
 %{gemdir}/cache/%{gemname}-%{fullver}.gem
@@ -126,13 +99,11 @@ ruby -rubygems -Ilib/ -S bin/rspec \
 
 
 %files	doc
-%defattr(-,root,root,-)
 %{gemdir}/doc/%{gemname}-%{fullver}
-%{geminstdir}/Gemfile
-%{geminstdir}/Guardfile
-%{geminstdir}/Rakefile
-%{geminstdir}/cucumber.yml
-%{geminstdir}/%{gemname}.gemspec
+#%{geminstdir}/Gemfile
+#%{geminstdir}/Rakefile
+#%{geminstdir}/cucumber.yml
+#%{geminstdir}/%{gemname}.gemspec
 %{geminstdir}/features/
-%{geminstdir}/script/
+#%{geminstdir}/script/
 %{geminstdir}/spec/
