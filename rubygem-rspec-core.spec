@@ -15,7 +15,7 @@
 Summary:	Rspec-2 runner and formatters
 Name:		rubygem-%{gemname}
 Version:	%{majorver}
-Release:	%mkrel 4
+Release:	5
 
 Group:		Development/Ruby
 License:	MIT
