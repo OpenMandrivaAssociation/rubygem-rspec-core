@@ -34,14 +34,14 @@ Documents, RDoc & RI documentation for %{name}.
 %gem_install
 
 %files
-%{_bindir}/autospec
-%{_bindir}/rspec
+# %{_bindir}/autospec
+# %{_bindir}/rspec
 %dir %{ruby_gemdir}/gems/%{rbname}-%{version}
-%dir %{ruby_gemdir}/gems/%{rbname}-%{version}/exe
-%{ruby_gemdir}/gems/%{rbname}-%{version}/exe/autospec
-%{ruby_gemdir}/gems/%{rbname}-%{version}/exe/rspec
+# %dir %{ruby_gemdir}/gems/%{rbname}-%{version}/exe
+# %{ruby_gemdir}/gems/%{rbname}-%{version}/exe/autospec
+# %{ruby_gemdir}/gems/%{rbname}-%{version}/exe/rspec
 %dir %{ruby_gemdir}/gems/%{rbname}-%{version}/lib/
-%{ruby_gemdir}/gems/%{rbname}-%{version}/lib/*
+# %{ruby_gemdir}/gems/%{rbname}-%{version}/lib/*
 %{ruby_gemdir}/specifications/%{rbname}-%{version}.gemspec
 %{_datadir}/gems/doc/rspec-core-3.1.4/rdoc/Object.html
 %{_datadir}/gems/doc/rspec-core-3.1.4/rdoc/RR.html
@@ -792,7 +792,7 @@ Documents, RDoc & RI documentation for %{name}.
 %{_datadir}/gems/doc/rspec-core-3.1.4/ri/RSpec/ExampleGroups/cdesc-ExampleGroups.ri
 %{_datadir}/gems/doc/rspec-core-3.1.4/ri/RSpec/cdesc-RSpec.ri
 %{_datadir}/gems/doc/rspec-core-3.1.4/ri/cache.ri
-%{_datadir}/gems/gems/rspec-core-3.1.4/exe/rspec
+# %{_datadir}/gems/gems/rspec-core-3.1.4/exe/rspec
 %{_datadir}/gems/gems/rspec-core-3.1.4/lib/rspec/autorun.rb
 %{_datadir}/gems/gems/rspec-core-3.1.4/lib/rspec/core.rb
 %{_datadir}/gems/gems/rspec-core-3.1.4/lib/rspec/core/backport_random.rb
@@ -846,13 +846,13 @@ Documents, RDoc & RI documentation for %{name}.
 %{_datadir}/gems/gems/rspec-core-3.1.4/lib/rspec/core/version.rb
 %{_datadir}/gems/gems/rspec-core-3.1.4/lib/rspec/core/warnings.rb
 %{_datadir}/gems/gems/rspec-core-3.1.4/lib/rspec/core/world.rb
-%{_datadir}/gems/specifications/rspec-core-3.1.4.gemspec
+# %{_datadir}/gems/specifications/rspec-core-3.1.4.gemspec
 
 %files doc
 %{ruby_gemdir}/doc/%{rbname}-%{version}
 %{ruby_gemdir}/gems/%{rbname}-%{version}/*.md
 %{ruby_gemdir}/gems/%{rbname}-%{version}/*.txt
-%dir %{ruby_gemdir}/gems/%{rbname}-%{version}/features
-%{ruby_gemdir}/gems/%{rbname}-%{version}/features/*
-%dir %{ruby_gemdir}/gems/%{rbname}-%{version}/spec
-%{ruby_gemdir}/gems/%{rbname}-%{version}/spec/*
+# %dir %{ruby_gemdir}/gems/%{rbname}-%{version}/features
+# %{ruby_gemdir}/gems/%{rbname}-%{version}/features/*
+# %dir %{ruby_gemdir}/gems/%{rbname}-%{version}/spec
+# %{ruby_gemdir}/gems/%{rbname}-%{version}/spec/*
