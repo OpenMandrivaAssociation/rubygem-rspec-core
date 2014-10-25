@@ -16,12 +16,12 @@ BDD for Ruby. RSpec runner and example groups.
 
 %files
 %{_bindir}/rspec
-%dir %{ruby_gemdir}/gems/%{rbname}-%{version}
-%dir %{ruby_gemdir}/gems/%{rbname}-%{version}/exe
-%{ruby_gemdir}/gems/%{rbname}-%{version}/exe/rspec
-%dir %{ruby_gemdir}/gems/%{rbname}-%{version}/lib/
-%{ruby_gemdir}/gems/%{rbname}-%{version}/lib/*
-%{ruby_gemdir}/specifications/%{rbname}-%{version}.gemspec
+%dir %{gem_dir}/gems/%{rbname}-%{version}
+%dir %{gem_dir}/gems/%{rbname}-%{version}/exe
+%{gem_dir}/gems/%{rbname}-%{version}/exe/rspec
+%dir %{gem_dir}/gems/%{rbname}-%{version}/lib/
+%{gem_dir}/gems/%{rbname}-%{version}/lib/*
+%{gem_dir}/specifications/%{rbname}-%{version}.gemspec
 
 #----------------------------------------------------------------------------
 
@@ -34,7 +34,7 @@ Requires:	%{name} = %{EVRD}
 Documents, RDoc & RI documentation for %{name}.
 
 %files doc
-%{ruby_gemdir}/doc/%{rbname}-%{version}
+%{gem_dir}/doc/%{rbname}-%{version}
 
 #----------------------------------------------------------------------------
 
