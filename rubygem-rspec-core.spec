@@ -3,7 +3,7 @@
 Summary:	RSpec runner and example groups
 Name:		rubygem-%{rbname}
 Version:	3.1.4
-Release:	1
+Release:	2
 License:	GPLv2+ or Ruby
 Group:		Development/Ruby
 URL:		http://github.com/rspec/rspec-core
