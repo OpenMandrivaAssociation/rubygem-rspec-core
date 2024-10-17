@@ -6,7 +6,7 @@ Version:	3.1.4
 Release:	2
 License:	GPLv2+ or Ruby
 Group:		Development/Ruby
-URL:		http://github.com/rspec/rspec-core
+URL:		https://github.com/rspec/rspec-core
 Source0:	http://rubygems.org/gems/%{rbname}-%{version}.gem
 BuildRequires:	rubygems
 BuildArch:	noarch
